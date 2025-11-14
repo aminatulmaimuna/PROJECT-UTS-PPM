@@ -1,35 +1,40 @@
+// app/(tabs)/_layout.tsx
+
 import { Tabs } from 'expo-router';
-import React from 'react';
+// Import icon (pastikan Anda sudah install @expo/vector-icons)
+import { FontAwesome } from '@expo/vector-icons'; 
 
-import { HapticTab } from '@/components/haptic-tab';
-import { IconSymbol } from '@/components/ui/icon-symbol';
-import { Colors } from '@/constants/theme';
-import { useColorScheme } from '@/hooks/use-color-scheme';
-
-export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
+export default function TabsLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
-        tabBarButton: HapticTab,
-      }}>
+        tabBarActiveTintColor: '#2A4B3A', // Warna ikon aktif
+      }}
+    >
       <Tabs.Screen
-        name="index"
+        name="index" // merujuk ke app/(tabs)/index.tsx
         options={{
           title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          tabBarIcon: ({ color }) => <FontAwesome name="home" size={24} color={color} />,
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="kost" // merujuk ke app/(tabs)/kost.tsx
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: 'Daftar Kost',
+          tabBarIcon: ({ color }) => <FontAwesome name="list-ul" size={22} color={color} />,
         }}
       />
+      
+      {/* INI ADALAH TAB BARU ANDA */}
+      <Tabs.Screen
+        name="profile" // merujuk ke app/(tabs)/profile.tsx
+        options={{
+          title: 'Profile',
+          tabBarIcon: ({ color }) => <FontAwesome name="user" size={24} color={color} />,
+        }}
+      />
+      
     </Tabs>
   );
 }
