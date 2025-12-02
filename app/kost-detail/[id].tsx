@@ -11,10 +11,8 @@ import {
     TouchableOpacity,
     View
 } from 'react-native';
+import { KOST_DATA } from '../../constants/KostDataLocal';
 import { KostItem } from '../../types';
-
-// PASTIKAN URL DASAR INI BENAR
-const API_BASE_URL = "https://691568f284e8bd126af9c21c.mockapi.io/api/v1/kost";
 
 export default function KostDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>(); // --> Mengambil "1"
@@ -24,25 +22,17 @@ export default function KostDetailScreen() {
 
   useEffect(() => {
     if (id) {
-      async function loadDetail() {
-        setLoading(true);
-        try {
-          // Memanggil API khusus untuk ID "1"
-          // cth: .../api/v1/kost/1
-          const response = await fetch(`${API_BASE_URL}/${id}`); 
-          const data = await response.json();
-          
-          // 'data' SEKARANG BERISI SATU OBJEK JSON ANDA
-          // { "nama": "Muslimah", "harga": 700000, ... }
-          setKostDetail(data); 
-        } catch (error) {
-          console.error("Gagal ambil detail:", error);
-          setKostDetail(null);
-        } finally {
-          setLoading(false);
-        }
+      setLoading(true);
+      try {
+        const found = KOST_DATA.find((k) => k.id === id);
+        if (found) setKostDetail(found as unknown as KostItem);
+        else setKostDetail(null);
+      } catch (error) {
+        console.error('Gagal ambil detail lokal:', error);
+        setKostDetail(null);
+      } finally {
+        setLoading(false);
       }
-      loadDetail();
     }
   }, [id]);
 
@@ -116,8 +106,8 @@ export default function KostDetailScreen() {
   
   return (
     <ScrollView style={styles.container}>
-      {/* Mengambil "gambar_url": "https://i.pinimg.com/..." */}
-      <Image source={{ uri: kostDetail.gambar_url }} style={styles.image} />
+      {/* Use bundled image if available otherwise use remote URL */}
+      <Image source={kostDetail.imageSource ? kostDetail.imageSource : { uri: kostDetail.gambar_url }} style={styles.image} />
       
       <View style={styles.infoContainer}>
         {/* Mengambil "nama": "Muslimah" */}

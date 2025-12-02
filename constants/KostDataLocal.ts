@@ -1,0 +1,66 @@
+import { KostItem } from '../types';
+
+// Data lokal (digunakan tanpa API). Gunakan `imageSource` untuk gambar bundel (require).
+export const KOST_DATA: KostItem[] = [
+  {
+    id: '1',
+    nama: 'Kost Muslimah',
+    harga: '500.000-650.000',
+    satuan_harga: 'bulan',
+    deskripsi: 'Kost khusus muslimah yang tenang dan nyaman. Fasilitas lengkap, kamar mandi dalam,dapur bersama, ada kulkas bersama, dan lokasi depan alfa Kafe Kbumi.',
+    gambar_url: '',
+    kontak_whatsapp: '081385634915',
+    // imageSource digunakan oleh komponen untuk memuat gambar lokal
+    imageSource: require('../assets/images/kost-muslimah-new.jpeg'),
+  },
+  {
+    id: '2',
+    nama: 'Kost Bu Hj Enen',
+    harga: '500.000',
+    satuan_harga: 'bulan',
+    deskripsi: 'Kost wanita dengan harga terjangkau. Fasilitas lengkap, kamar mandi dalam, wifi, kulkas, dapur bersama lokasi belakang LPK Kafe Kbumi',
+    gambar_url: '',
+    kontak_whatsapp: '6285177788889',
+    imageSource: require('../assets/images/Kost Bu Hj Enen.jpeg'),
+  },
+  {
+    id: '3',
+    nama: 'Kost Muezza',
+    harga: '950.000',
+    satuan_harga: 'bulan',
+    deskripsi: 'Kost putri yang bersih dan aman  Bangunan kost baru dengan fasilitas modern. Kamar mandi dalam, dan Wi-Fi kencang. Lokasi belakang kampus',
+    gambar_url: '',
+    kontak_whatsapp: '081285281116',
+    imageSource: require('../assets/images/Kost Muezza.jpeg'),
+  },
+  {
+    id: '4',
+    nama: 'Kost Hj Andah',
+    harga: '800.000',
+    satuan_harga: 'bulan',
+    deskripsi: 'Kamar mandi dalam, Lokasi di belakang kampus.',
+    gambar_url: '',
+    kontak_whatsapp: '6289534445555',
+    imageSource: require('../assets/images/Kost Hj Andah.jpeg'),
+  },
+  {
+    id: '5',
+    nama: 'Kost Putra',
+    harga: '600.000',
+    satuan_harga: 'bulan',
+    deskripsi: 'Kost  khusus putra. Harga sudah termasuk semuanya (listrik, air, wifi). Bawa badan saja.',
+    gambar_url: '',
+    kontak_whatsapp: '085703050344',
+    imageSource: require('../assets/images/Kost Putra.jpeg'),
+  },
+  {
+    id: '6',
+    nama: 'Green Kost',
+    harga: '1.000.000',
+    satuan_harga: 'bulan',
+    deskripsi: 'Kost premium dengan fasilitas setara apartemen. Full furnished, AC, TV, water heater, dan parkir mobil luas. Keamanan 24 jam.',
+    gambar_url: '',
+    kontak_whatsapp: '6281399990000',
+    imageSource: require('../assets/images/green-kost.jpeg'),
+  },
+];

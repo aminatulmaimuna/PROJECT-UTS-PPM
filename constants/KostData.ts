@@ -6,42 +6,42 @@
 //   { 
 //     id: '1', 
 //     name: 'Kost Muslimah', 
-//     price: 'Rp. 700.000 / bulan', 
-//     imageUrl: require('../assets/images/kost-muslimah.jpeg'),
-//     description: 'Kost khusus muslimah yang tenang dan nyaman. Fasilitas lengkap, kamar mandi dalam, dan lokasi strategis dekat masjid dan area kampus.',
-//     whatsapp: '082185281116' // ✅ nomor pemilik kost Muslimah
+//     price: 'Rp. 500.000-650.000 / bulan', 
+//     imageUrl: require('../assets/images/kost-muslimah-new.jpeg'),
+//     description: 'Kost khusus muslimah yang tenang dan nyaman. Fasilitas lengkap, kamar mandi dalam,dapur bersama, ada kulkas bersama, dan lokasi strategis dekat masjid.',
+//     whatsapp: '081385634915' // 
 //   },
 //   { 
 //     id: '2', 
-//     name: 'Kost Kamojan', 
+//     name: 'Kost Bu Hj Enen', 
 //     price: 'Rp. 500.000 / bulan', 
-//     imageUrl: require('../assets/images/kost-kamojan.jpeg'),
-//     description: 'Kost pria/wanita (campur) dengan harga terjangkau. Fasilitas standar, area parkir motor, dan akses 24 jam.',
-//     whatsapp: '6285177788889' // ✅ nomor pemilik kost Kamojan
+//     imageUrl: require('../assets/images/Kost Bu Hj Enen.jpeg'),
+//     description: 'Kost wanita dengan harga terjangkau. Fasilitas lengkap, kamar mandi dalam, wifi, kulkas, dapur bersama lokasi belakang LPK Kafe Kbumi',
+//     whatsapp: '6285177788889' //
 //   },
 //   { 
 //     id: '3', 
-//     name: 'Mama Kost', 
-//     price: 'Rp. 500.000 / bulan', 
-//     imageUrl: require('../assets/images/mama-kost.jpeg'),
-//     description: 'Kost putri yang bersih dan aman. Dikelola langsung oleh pemilik (Ibu Kost). Sudah termasuk listrik dan air. Kamar mandi luar.',
-//     whatsapp: '6281266667777'
+//     name: 'Kost Muezza', 
+//     price: 'Rp. 950.000 / bulan', 
+//     imageUrl: require('../assets/images/Kost Muezza.jpeg'),
+//     description: 'Kost putri yang bersih dan aman  Bangunan kost baru dengan fasilitas modern. Kamar mandi dalam, dan Wi-Fi kencang. Lokasi belakang kampus',
+//     whatsapp: '08122085126'
 //   },
 //   { 
 //     id: '4', 
-//     name: 'Kost Sadjoe', 
-//     price: 'Rp. 700.000 / bulan', 
-//     imageUrl: require('../assets/images/kost-sadjoe.jpeg'),
+//     name: 'Kost Hj Andah', 
+//     price: 'Rp. 800.000 / bulan', 
+//     imageUrl: require('../assets/images/Kost Hj Andah.jpeg'),
 //     description: 'Bangunan kost baru dengan fasilitas modern. Kamar mandi dalam, AC, dan Wi-Fi kencang. Lokasi di pinggir jalan raya.',
-//     whatsapp: '6289534445555'
+//     whatsapp: '081285281116'
 //   },
 //   { 
 //     id: '5', 
-//     name: 'Edi Kost', 
+//     name: 'Kost Putra', 
 //     price: 'Rp. 600.000 / bulan', 
-//     imageUrl: require('../assets/images/edi-kost.jpeg'),
-//     description: 'Kost sederhana khusus karyawan/mahasiswa. Harga sudah termasuk semuanya (listrik, air, wifi). Bawa badan saja.',
-//     whatsapp: '6281255512121'
+//     imageUrl: require('../assets/images/Kost Putra.jpeg'),
+//     description: 'Kost  khusus putra. Harga sudah termasuk semuanya (listrik, air, wifi). Bawa badan saja.',
+//     whatsapp: '085703050344'
 //   },
 //   { 
 //     id: '6', 

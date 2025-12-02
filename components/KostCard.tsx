@@ -2,11 +2,11 @@
 import React from 'react';
 // 1. Ganti 'Image' dengan 'ImageBackground'
 import {
-  ImageBackground,
-  StyleSheet,
-  Text, // <-- Ganti ini
-  TouchableOpacity,
-  View
+    ImageBackground,
+    StyleSheet,
+    Text, // <-- Ganti ini
+    TouchableOpacity,
+    View
 } from 'react-native';
 import { KostItem } from '../types'; // Pastikan tipe ini sesuai dengan API
 
@@ -22,8 +22,8 @@ export default function KostCard({ item, onPress }: KostCardProps) {
       
       {/* 2. Gunakan ImageBackground, bukan Image */}
       <ImageBackground
-        // 3. Sesuaikan dengan nama field API: 'gambar_url'
-        source={{ uri: item.gambar_url }} 
+        // Use bundled local image if provided, otherwise fallback to remote URL
+        source={item.imageSource ? item.imageSource : { uri: item.gambar_url }}
         style={styles.imageBackground}
         resizeMode="cover"
       >

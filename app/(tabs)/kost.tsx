@@ -1,13 +1,13 @@
 // app/(tabs)/kost.tsx
 
 import { Href, router } from 'expo-router';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ActivityIndicator, FlatList, StyleSheet, Text, View } from 'react-native';
 import { KostCard } from '../../components';
+import { KOST_DATA } from '../../constants/KostDataLocal';
 import { KostItem } from '../../types';
 
-// PASTIKAN URL INI BENAR ke Mock API Anda
-const API_URL = "https://691568f284e8bd126af9c21c.mockapi.io/api/v1/kost";
+// Using local data; API removed
 
 export default function KostScreen() {
   
@@ -15,20 +15,9 @@ export default function KostScreen() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    async function loadData() {
-      try {
-        const response = await fetch(API_URL);
-        const data = await response.json();
-        // 'data' SEKARANG BERISI ARRAY JSON ANDA
-        // [ { "nama": "Muslimah", ... }, { ... } ]
-        setKostList(data); 
-      } catch (error) {
-        console.error("Gagal mengambil data:", error);
-      } finally {
-        setLoading(false);
-      }
-    }
-    loadData();
+    // Use local data instead of fetching from API
+    setKostList(KOST_DATA as unknown as KostItem[]);
+    setLoading(false);
   }, []);
 
   const handlePress = (item: KostItem) => {
